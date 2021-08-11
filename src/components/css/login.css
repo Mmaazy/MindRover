@@ -1,0 +1,10 @@
+.login-form{
+    border-style: groove;
+    padding: 15px;;
+}
+
+.main {
+    height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+}

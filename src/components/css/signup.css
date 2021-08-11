@@ -1,0 +1,11 @@
+.signup-form{
+    border-style: groove;
+    padding: 15px;;
+}
+
+.signup-main {
+    height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+}
+
