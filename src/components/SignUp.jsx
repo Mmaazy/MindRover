@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/signup.css";
-import { Row, Col, Container, Figure, Form} from "react-bootstrap";
-import {Link} from 'react-router-dom';
+import { Row, Col, Container, Figure, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -10,14 +10,8 @@ const SignUp = () => {
         <Container>
           <Row>
             <Col className="d-flex align-items-center" xl={6} lg={7} md={12}>
-               
-              <Figure>
-                <Figure.Image
-                  //width={171}
-                  //height={180}
-                  alt="171x180"
-                  src="./images/signup.png"
-                />
+              <Figure className="signup-picture">
+                <Figure.Image alt="171x180" src="./images/signup.png" />
               </Figure>
             </Col>
 
@@ -41,12 +35,12 @@ const SignUp = () => {
                   <button className="btn btn-secondary my-3" type="button">
                     Sign Up
                   </button>
-                    <Link to="/login">
+                  <Link to="/login" style={{textDecoration:'none'}}>
                     <div className="d-grid gap-2 login-button my-2">
-                  <button className="btn btn-secondary" type="button">
-                    Login
-                  </button>
-                  </div>
+                      <button className="btn btn-secondary" type="button">
+                        Login
+                      </button>
+                    </div>
                   </Link>
                 </div>
               </Form>

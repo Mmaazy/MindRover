@@ -2,46 +2,55 @@ import React from "react";
 import { Row, Col, Container, Figure, Form } from "react-bootstrap";
 import "./css/login.css";
 import { Link } from "react-router-dom";
+import {useState} from 'react';
 
-const Login = (props) => {
-    const headerChange = () =>{
+const Login = () => {
 
-    };
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [allEntry, setAllEntry] = useState([]);
+
+  const loginSubmitForm = (e) =>{
+    e.preventDefault();
+      const newEntry = {email: email, password: password}
+      setAllEntry([...allEntry, newEntry]);
+      console.log(allEntry);
+  };
+
+
   return (
     <div className="main">
       <Container>
         <Row>
-          <Col xl={6} lg={7} md={12}>
-            <Figure>
-              <Figure.Image
-                //width={171}
-                //height={180}
-                alt="171x180"
-                src="./images/login2.png"
-              />
+          <Col xl={6} lg={7} md={12} sm={0}>
+            <Figure className="login-picture">
+              <Figure.Image alt="171x180" src="./images/login2.png" />
             </Figure>
           </Col>
 
-          <Col xl={5} lg={5} md={12}>
+          <Col xl={5} lg={5} md={12} sm={12}>
             <Form className="login-form">
               <h4>Login</h4>
+
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email or Phone number</Form.Label>
-                <Form.Control type="email" />
+                <Form.Control type="email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} />
               </Form.Group>
+              
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <div className="d-flex justify-content-between">
                   <Form.Label>Password</Form.Label>
                   <Form.Label>Forgot Password</Form.Label>
                 </div>
-                <Form.Control type="password" />
+                <Form.Control type="password" autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)}/>
               </Form.Group>
-              <Link to="/postlogin">
-              <div className="d-grid gap-2 login-button">
-                <button onClick={headerChange} className="btn btn-secondary" type="button">
-                  Login
-                </button>
-              </div>
+
+              <Link to="/postlogin" style={{textDecoration:'none'}}>
+                <div className="d-grid gap-2 login-button" >
+                  <button className="btn btn-secondary" type="button" onClick={loginSubmitForm}>
+                    Login
+                  </button>
+                </div>
               </Link>
 
               <div className="my-5 text-center">
@@ -57,7 +66,7 @@ const Login = (props) => {
                   </Col>
                 </Row>
 
-                <Link to="/signup">
+                <Link to="/signup" style={{textDecoration:'none'}}>
                   <div className="d-grid gap-2 login-button my-5">
                     <button className="btn btn-secondary" type="button">
                       Sign Up
@@ -74,3 +83,5 @@ const Login = (props) => {
 };
 
 export default Login;
+
+
