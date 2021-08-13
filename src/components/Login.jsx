@@ -2,20 +2,9 @@ import React from "react";
 import { Row, Col, Container, Figure, Form } from "react-bootstrap";
 import "./css/login.css";
 import { Link } from "react-router-dom";
-import {useState} from 'react';
+//import {useState} from 'react';
 
 const Login = () => {
-
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [allEntry, setAllEntry] = useState([]);
-
-  const loginSubmitForm = (e) =>{
-    e.preventDefault();
-      const newEntry = {email: email, password: password}
-      setAllEntry([...allEntry, newEntry]);
-      console.log(allEntry);
-  };
 
 
   return (
@@ -29,12 +18,13 @@ const Login = () => {
           </Col>
 
           <Col xl={5} lg={5} md={12} sm={12}>
-            <Form className="login-form">
+
+            <Form className="login-form" >
               <h4>Login</h4>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email or Phone number</Form.Label>
-                <Form.Control type="email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <Form.Control type="email" autoComplete="off" />
               </Form.Group>
               
               <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -42,16 +32,22 @@ const Login = () => {
                   <Form.Label>Password</Form.Label>
                   <Form.Label>Forgot Password</Form.Label>
                 </div>
-                <Form.Control type="password" autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <Form.Control type="password" autoComplete="off" />
               </Form.Group>
 
-              <Link to="/postlogin" style={{textDecoration:'none'}}>
+         <Link to="/postlogin" style={{textDecoration:'none'}}>
                 <div className="d-grid gap-2 login-button" >
-                  <button className="btn btn-secondary" type="button" onClick={loginSubmitForm}>
+                  <button className="btn btn-secondary" type="submit" >
                     Login
                   </button>
                 </div>
-              </Link>
+              </Link> 
+
+            {/*   <div className="d-grid gap-2 login-button" >
+                  <button className="btn btn-secondary" type="submit" >
+                    Login
+                  </button>
+                </div> */}
 
               <div className="my-5 text-center">
                 <Row>

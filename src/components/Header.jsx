@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter  } from "react-router-dom";
 import { useEffect } from "react";
 import "./css/header.css";
 import { BsCloudUpload} from "react-icons/bs";
@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <>
-      {tempPath == "/postlogin" ? (
+      {tempPath === "/postlogin" ? (
         <Navbar
           collapseOnSelect
           expand="lg"
@@ -70,3 +70,4 @@ const Header = () => {
 };
 
 export default withRouter(Header);
+
