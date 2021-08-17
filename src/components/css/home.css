@@ -1,0 +1,63 @@
+.my-main{
+    padding: 0 50px;
+}
+
+.Lbadges{
+    color:red;
+    background-color: rgb(206, 200, 200);
+    transition: 1.5s;
+    border: 5px solid rgb(206, 200, 200);
+    border-radius: 50px;
+    width: 200px;
+}
+
+.Lbadges:hover{
+    box-shadow: 0 5px 50px 0 #455a64 inset, 0 5px 10px 0 #455a64,
+                0 5px 50px 0 #455a64 inset, 0 5px 10px 0 #455a64;
+                color: rgb(206, 200, 200);
+}
+
+.Rbadges{
+    color:red;
+    background-color: black;
+    transition: 1.5s;
+    border: 5px solid black;
+    border-radius: 50px;
+    width: 200px;
+}
+
+.Rbadges:hover{
+    box-shadow: 0 5px 50px 0 #455a64 inset, 0 5px 10px 0 #455a64,
+                0 5px 50px 0 #455a64 inset, 0 5px 10px 0 #455a64;
+                color: rgb(206, 200, 200);
+}
+
+.Mlbadges{
+    color:red;
+    background-color: rgb(206, 200, 200);
+    transition: 1.5s;
+    border: 5px solid rgb(206, 200, 200);
+    border-radius: 50px;
+    width: 300px;
+}
+
+.Mlbadges:hover{
+    box-shadow: 0 5px 50px 0 #455a64 inset, 0 5px 10px 0 #455a64,
+                0 5px 50px 0 #455a64 inset, 0 5px 10px 0 #455a64;
+                color: rgb(206, 200, 200);
+}
+
+.Mrbadges{
+    color:red;
+    background-color: black;
+    transition: 1.5s;
+    border: 5px solid black;
+    border-radius: 50px;
+    width: 300px;
+}
+
+.Mrbadges:hover{
+    box-shadow: 0 5px 50px 0 #455a64 inset, 0 5px 10px 0 #455a64,
+                0 5px 50px 0 #455a64 inset, 0 5px 10px 0 #455a64;
+                color: rgb(206, 200, 200);
+}
