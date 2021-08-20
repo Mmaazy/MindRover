@@ -1,10 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
-import { Link, withRouter  } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { useEffect } from "react";
 import "./css/header.css";
-import { BsCloudUpload} from "react-icons/bs";
+import { BsCloudUpload } from "react-icons/bs";
 
 const Header = () => {
   let tempPath = window.location.pathname;
@@ -21,7 +21,7 @@ const Header = () => {
           expand="lg"
           bg="dark"
           variant="dark"
-          className="secoundnav"
+          
         >
           <Container fluid>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -32,7 +32,7 @@ const Header = () => {
                 </Nav.Link>
               </Nav>
               <Nav>
-                <NavDropdown title="Username" id="collasible-nav-dropdown">
+                <NavDropdown title="Username" id="collasible-nav-dropdown" className="secoundnav">
                   <NavDropdown.Item href="#action/3.1">1</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">2</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">3</NavDropdown.Item>
@@ -70,4 +70,3 @@ const Header = () => {
 };
 
 export default withRouter(Header);
-
